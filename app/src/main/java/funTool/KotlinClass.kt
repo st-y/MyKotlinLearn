@@ -14,11 +14,16 @@ import dataBean.interfaceThread
 class KotlinClass : AllClass, ClickAble, interfaceThread {
 
     /**
-     * kotlin中可见性有四种，
+     * kotlin中可见性有四种，  在省略修饰符的情况下默认是public的
+     *
+     * 可见性由低到高 ：如下
+     *
      * private 本类可见  可顶层声明（本文件可见）
      * protected 子类中可见
      * internal 模块中可见   可顶层声明（模块中可见） ：模块是kotlin 新加的修饰符，模块指一组一起编译的kotlin文件
      * public 均可见   可顶层声明（均可见）
+     *
+     * 而且和Java一样可见度之间是有层级关系的
      */
 
 
