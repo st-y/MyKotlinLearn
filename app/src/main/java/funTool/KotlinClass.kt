@@ -13,17 +13,23 @@ import dataBean.interfaceThread
  */
 class KotlinClass : AllClass, ClickAble, interfaceThread {
 
+    /**
+     * kotlin中可见性有四种，
+     * private 本类可见  可顶层声明（本文件可见）
+     * protected 子类中可见
+     * internal 模块中可见   可顶层声明（模块中可见） ：模块是kotlin 新加的修饰符，模块指一组一起编译的kotlin文件
+     * public 均可见   可顶层声明（均可见）
+     */
+
 
     /**
      * 在引入的两个接口中有同名的函数，以一个方法作为引入，然后在方法中，用super<> 的形式进行显示标明你想要使用的是哪个父类的方法，可以都标明或只标明其中的一部分
      */
     override fun mamamiya() {
-        super<AllClass>.mamamiya()//
+        super<AllClass>.mamamiya()
         super<ClickAble>.mamamiya()
     }
 
-
     override fun click() = println()
-
 
 }
